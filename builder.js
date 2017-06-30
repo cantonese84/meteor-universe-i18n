@@ -60,7 +60,7 @@ class UniverseI18nBuilder extends CachingCompiler {
         } else {
             try {
                 translations = YAML.load(source, {
-                    schema: YAML.FAILSAFE_SCHEMA,
+                    schema: YAML.DEFAULT_SAFE_SCHEMA,
                     onWarning: console.warn.bind(console)
                 });
             } catch (e) {
